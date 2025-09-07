@@ -1,17 +1,21 @@
 import json
 from pathlib import Path
+
+import joblib
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
-import joblib
+from sklearn.model_selection import train_test_split
 
 DATA_PATH = Path(__file__).resolve().parents[1] / "data" / "sales.csv"
 MODEL_PATH = Path(__file__).resolve().parents[1] / "models" / "model.pkl"
 
+
 def main():
     if not DATA_PATH.exists():
-        print(f"[!] Expected data at {DATA_PATH}. Please add a 'sales.csv' with numeric features and a 'target' column.")
+        print(
+            f"[!] Expected data at {DATA_PATH}. Please add a 'sales.csv' with numeric features and a 'target' column."
+        )
         return
 
     df = pd.read_csv(DATA_PATH)
@@ -34,6 +38,7 @@ def main():
     joblib.dump({"model": model, "feature_names": list(X.columns)}, MODEL_PATH)
 
     print(json.dumps({"mse": mse, "r2": r2, "test_size": len(X_test)}, indent=2))
+
 
 if __name__ == "__main__":
     main()

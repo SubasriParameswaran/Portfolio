@@ -1,19 +1,24 @@
-import joblib
 from pathlib import Path
-import streamlit as st
+
+import joblib
 import numpy as np
+import streamlit as st
 
 st.title("Retail Demand Forecasting — Demo App")
 
 MODEL_PATH = Path(__file__).resolve().parents[0] / "models" / "model.pkl"
 
+
 @st.cache_resource
 def load_model():
     if not MODEL_PATH.exists():
-        st.error("Model not found. Please run `python src/train.py` first to create models/model.pkl")
+        st.error(
+            "Model not found. Please run `python src/train.py` first to create models/model.pkl"
+        )
         st.stop()
     bundle = joblib.load(MODEL_PATH)
     return bundle["model"], bundle["feature_names"]
+
 
 model, feature_names = load_model()
 

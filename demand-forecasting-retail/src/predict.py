@@ -1,10 +1,12 @@
 import argparse
 import json
 from pathlib import Path
+
 import joblib
 import numpy as np
 
 MODEL_PATH = Path(__file__).resolve().parents[1] / "models" / "model.pkl"
+
 
 def load_model():
     if not MODEL_PATH.exists():
@@ -12,9 +14,12 @@ def load_model():
     bundle = joblib.load(MODEL_PATH)
     return bundle["model"], bundle["feature_names"]
 
+
 def main():
     parser = argparse.ArgumentParser(description="Predict with the trained model")
-    parser.add_argument("--input", type=str, required=True, help="Path to JSON file with feature:value mapping")
+    parser.add_argument(
+        "--input", type=str, required=True, help="Path to JSON file with feature:value mapping"
+    )
     args = parser.parse_args()
 
     model, feature_names = load_model()
@@ -31,6 +36,7 @@ def main():
 
     pred = model.predict(X)[0]
     print(json.dumps({"prediction": float(pred)}, indent=2))
+
 
 if __name__ == "__main__":
     main()
