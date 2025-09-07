@@ -1,47 +1,25 @@
-# Data Science & ML Portfolio Starter
+# Hi, I'm Subasri Parameswaran 👋
 
-This repo is a **starter kit** to jumpstart your GitHub portfolio. It includes:
-- A **profile README** template to showcase your story.
-- A reusable **project template** (README, CI, pre-commit, env).
-- Two example, career-relevant projects for you to complete and publish.
-- A minimal **CI workflow** and **code quality** setup to look professional.
+**Supply Chain × Data Science × ML/AI.** I turn messy operational data into decisions that move inventory, reduce waste, and improve service levels.
 
-> Generated for **Suba Parameswaran** on **2025-09-07**. Replace placeholders with your details, then push to GitHub.
+- 🎯 **Focus**: demand planning & forecasting, inventory optimization, vendor performance analytics, AI workflows.
+- 🧰 **Stack**: Python (pandas, scikit‑learn), SQL, Power BI, Streamlit, GitHub Actions, n8n.
+- 🏅 **Certs**: Microsoft **PL‑300** (passed), IBM **AI Engineering** (in progress).
+- 🌎 **Location**: Canada • Open to hybrid/remote roles and consulting.
+- ✉️ **Contact**: [LinkedIn](https://www.linkedin.com/in/subasriparameswaran) • [Email](mailto:p.subasri@gmail.com)
 
-## How to use
-1. Create a new GitHub repo (e.g., `suba-portfolio`) and clone it.
-2. Copy the pieces you want from this starter. Or initialize this directory as your portfolio repo.
-3. Replace `your-github-username` with your GitHub username in links.
-4. Start with `demand-forecasting-retail` (flagship project), then ship the rest.
-5. Turn each project into its **own repo** once polished, and **pin** the best 6 on your profile.
+## 🧩 Featured Projects
+- **Retail Demand Forecasting** — end‑to‑end model with feature engineering, ML, and a Streamlit demo app.
+- **Inventory Optimization (EOQ + ROP)** — a tiny optimizer for replenishment policy with uncertainty.
+- **Vendor Performance Dashboard (Power BI)** — On‑Time/ In‑Full, lead time reliability, and Pareto insights.
 
-## Quick commands
-```bash
-# optional: create a virtual environment
-python -m venv .venv && source .venv/bin/activate  # Windows: .venv\Scripts\activate
+## 🔬 What I do
+- Translate business questions into experiments and KPIs.
+- Build reproducible data pipelines and models (seeds, envs, tests).
+- Ship demo apps so stakeholders can “feel” the model before rollout.
 
-# install tools used by this starter
-pip install -r templates/requirements.txt
-pip install pre-commit
+## 📌 How to navigate
+- Pinned repositories = best work.
+- Each repo has: **Problem → Data → Method → Results → Demo → How to run**.
 
-# enable quality gates for your local repo
-pre-commit install
-
-# run linters / tests
-ruff check .
-black --check .
-pytest -q
-
-# run the demo app example (after training a model)
-streamlit run demand-forecasting-retail/app.py
-```
-
-## What’s inside
-- `PROFILE_README/README.md` → your **profile** landing page content.
-- `templates/` → reusable files: project README template, CI, pre-commit, etc.
-- `demand-forecasting-retail/` → your **flagship DS/ML** project (joblib model + Streamlit app).
-- `inventory-optimization-eoq/` → quick **operations research** project.
-- `powerbi-vendor-performance/` → **Power BI** measures and write-up for vendor performance.
-
----
-**Tip:** Keep real datasets out of the repo. Use small samples or provide instructions to download from public sources.
+> If you like structured, thoughtful analytics with business impact, you’ll like my repos.
