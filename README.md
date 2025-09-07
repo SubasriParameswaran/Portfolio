@@ -1,3 +1,6 @@
+![CI](https://github.com/SubasriParameswaran/Portfolio/actions/workflows/ci.yml/badge.svg)
+
+
 # Hi, I'm Subasri Parameswaran 👋
 
 **Supply Chain × Data Science × ML/AI.** I turn messy operational data into decisions that move inventory, reduce waste, and improve service levels.
